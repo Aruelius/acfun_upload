@@ -181,7 +181,7 @@ class AcFun(object):
                 json={"headers":{"devicetype":7}}
             )
             return b64decode(
-                r.json()["vdata"]["uptoken"]
+                r.json()["info"]["upToken"]
             ).decode("utf-8").replace("null:", "")
         f = open(image_path, "rb")
         file_data = f.read()
